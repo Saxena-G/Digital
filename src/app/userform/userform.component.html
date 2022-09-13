@@ -1,0 +1,14 @@
+<h1>User Form</h1>
+<input [(ngModel)] = 'user.name'/>
+<input [(ngModel)] = 'user.age' type="number"/>
+<input [(ngModel)] = 'user.email'/>
+
+<button (click) ='save()'>Save User</button>
+
+
+<ol>
+       <li *ngFor="let user of users"> 
+         {{user.name}}, {{user.age}} , {{user.email}}<button (click)='deleteUser(user.id)'>Delete User</button>
+        </li>
+
+</ol>
