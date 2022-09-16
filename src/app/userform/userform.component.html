@@ -1,14 +1,20 @@
+
+<!-- <div class="container col-sm-3" style="width: 8px;" >
+<img src="../../assets/pexels-perfecto-capucine-1475296.jpg"/>
+
+</div> -->
 <h1>User Form</h1>
 <input [(ngModel)] = 'user.name'/>
 <input [(ngModel)] = 'user.age' type="number"/>
 <input [(ngModel)] = 'user.email'/>
 
-<button (click) ='save()'>Save User</button>
+<button class="btn btn-primary" style="margin: 2px;" (click) ='save()'>Save User</button>
 
 
-<ol>
+<ol class="container">
        <li *ngFor="let user of users"> 
-         {{user.name}}, {{user.age}} , {{user.email}}<button (click)='deleteUser(user.id)'>Delete User</button>
+         {{user.name | uppercase}}, {{user.age}} , {{user.email}}<button class="btn btn-danger " style="margin-top: 5px;" (click)='deleteUser(user.id)' >Delete User</button>
         </li>
 
 </ol>
+
